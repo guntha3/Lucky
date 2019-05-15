@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Lucky</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="buat_folder_baru">buat_folder_baru</string>
+    <string name="tambah_vidio">tambah_vidio</string>
+    <string name="youtube">Youtube</string>
+    <string name="video">Video</string>
+    <string name="home">Home</string>
+</resources>
