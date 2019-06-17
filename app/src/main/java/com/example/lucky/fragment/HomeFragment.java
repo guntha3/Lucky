@@ -7,6 +7,8 @@ import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.example.lucky.R;
 import com.example.lucky.tambah.TambahFolder;
@@ -18,10 +20,10 @@ import com.example.lucky.tambah.TambahVidio;
  */
 public class HomeFragment extends Fragment {
 
-    private View myMainView;
+    View myMainView;
 
-    private CardView tambahfolder;
-    private CardView tambahvidio;
+    //CardView tambahfolder;
+    ImageButton tambahvidio;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -35,18 +37,10 @@ public class HomeFragment extends Fragment {
 
         myMainView = inflater.inflate(R.layout.fragment_home, container, false);
 
-        tambahfolder = myMainView.findViewById(R.id.tambah_folder);
+        //tambahfolder = myMainView.findViewById(R.id.tambah_folder);
         tambahvidio = myMainView.findViewById(R.id.tambah_video);
 
 
-        tambahfolder.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(getContext(), TambahFolder.class);
-                startActivity(i);
-
-            }
-        });
 
         tambahvidio.setOnClickListener(new View.OnClickListener() {
             @Override

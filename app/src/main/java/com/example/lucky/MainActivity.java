@@ -7,33 +7,34 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.annotation.NonNull;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
-import android.widget.TextView;
 
 import com.example.lucky.fragment.HomeFragment;
 import com.example.lucky.fragment.VideoFragment;
 import com.example.lucky.fragment.YoutubeFragment;
 
+import io.paperdb.Paper;
+
 public class MainActivity extends AppCompatActivity {
-    private FrameLayout homeFrame;
-    private BottomNavigationView navigation;
-    private HomeFragment homeFragment;
-    private VideoFragment videoFragment;
-    private YoutubeFragment youtubeFragment;
+    FrameLayout homeFrame;
+    BottomNavigationView navigation;
+    HomeFragment homeFragment;
+    VideoFragment videoFragment;
+    YoutubeFragment youtubeFragment;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_home);
+        setContentView(R.layout.activity_main);
 
         navigation = findViewById(R.id.navigation);
         homeFrame = findViewById(R.id.homeFrame);
 
-
-
         homeFragment = new HomeFragment();
         videoFragment = new VideoFragment();
         youtubeFragment = new YoutubeFragment();
+
+        Paper.init(this);
 
         navigation.setOnNavigationItemSelectedListener(navListener);
         getSupportFragmentManager().beginTransaction().replace(R.id.homeFrame, new HomeFragment()).commit();

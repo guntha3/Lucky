@@ -29,12 +29,6 @@ public class TambahVidio extends AppCompatActivity {
         }
     }
 
-    public void playvideo(View view){
-
-        Intent playIntent = new Intent(this, VidioPlay.class);
-        playIntent.putExtra("videoUri",videoUri.toString());
-        startActivity(playIntent);
-    }
 
     @Override
     protected void onActivityResult (int requestCode, int resultCode, Intent data){

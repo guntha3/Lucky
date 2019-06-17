@@ -16,7 +16,7 @@ import com.example.lucky.youtube.YoutubeVideos;
 import java.util.Vector;
 
 public class YoutubeFragment extends Fragment {
-    private View myMainView;
+    View myMainView;
 
     RecyclerView recyclerView;
     Vector<YoutubeVideos> youtubeVideos = new Vector<YoutubeVideos>();
